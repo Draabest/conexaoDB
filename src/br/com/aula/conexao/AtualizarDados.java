@@ -29,7 +29,7 @@ public class AtualizarDados {
      * @param idade - Nova idade do aluno.
      * @throws SQLException - Lança uma exceção em caso de erro na atualização.
      */
-    private static void atualizarAluno(Connection conexao, int id, String nome, int idade) throws SQLException {
+    static void atualizarAluno(Connection conexao, int id, String nome, int idade) throws SQLException {
         // Comando SQL para atualizar um registro na tabela 'alunos'
         String sql = "UPDATE alunos SET nome = ?, idade = ? WHERE id = ?";
         try (PreparedStatement stmt = conexao.prepareStatement(sql)) {

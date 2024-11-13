@@ -26,7 +26,7 @@ public class LerDados {
      * @param conexao - Objeto de conexão com o banco de dados.
      * @throws SQLException - Lança uma exceção em caso de erro na leitura.
      */
-    private static void lerAlunos(Connection conexao) throws SQLException {
+    static void lerAlunos(Connection conexao) throws SQLException {
         // Comando SQL para selecionar todos os registros da tabela 'alunos'
         String sql = "SELECT id, nome, idade FROM alunos";
         try (PreparedStatement stmt = conexao.prepareStatement(sql);

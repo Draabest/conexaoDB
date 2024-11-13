@@ -41,7 +41,7 @@ public class InsereDados {
      * @param idade - Idade do aluno a ser inserido.
      * @throws SQLException - Exceção lançada em caso de erro durante a inserção.
      */
-    private static void inserirAluno(Connection conexao, String sql, String nome, int idade) throws SQLException {
+    static void inserirAluno(Connection conexao, String sql, String nome, int idade) throws SQLException {
         // Tenta criar um PreparedStatement para executar a consulta SQL
         try (PreparedStatement stmt = conexao.prepareStatement(sql)) {
             // Define os valores dos parâmetros na consulta (nome e idade)

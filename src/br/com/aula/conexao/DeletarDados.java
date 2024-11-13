@@ -27,7 +27,7 @@ public class DeletarDados {
      * @param id - ID do aluno a ser deletado.
      * @throws SQLException - Lança uma exceção em caso de erro na exclusão.
      */
-    private static void deletarAluno(Connection conexao, int id) throws SQLException {
+    static void deletarAluno(Connection conexao, int id) throws SQLException {
         // Comando SQL para deletar um registro da tabela 'alunos'
         String sql = "DELETE FROM alunos WHERE id = ?";
         try (PreparedStatement stmt = conexao.prepareStatement(sql)) {
